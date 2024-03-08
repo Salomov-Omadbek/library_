@@ -14,7 +14,7 @@ class BookSerializer(serializers.ModelSerializer):
         title = data.get('title', None)
         author = data.get('author', None)
 
-        # check title if it contains only alphabetical chars
+       
         if not title.isalpha():
             raise ValidationError(
                 {
@@ -23,7 +23,7 @@ class BookSerializer(serializers.ModelSerializer):
                 }
             )
 
-        # check title and author from database existence
+
         if Book.objects.filter(title=title, author=author).exists():
             raise ValidationError(
                 {
