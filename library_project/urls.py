@@ -11,7 +11,7 @@ schema_view = get_schema_view(
         default_version='v1',
         description='Library demo project',
         terms_of_service='demo.com',
-        contact=openapi.Contact(email='mukhammad.irmatov@gmail.com'),
+        contact=openapi.Contact(email='salomovomadbek03@gmail.com'),
         license=openapi.License(name="demo licence"),
     ),
     public=True,
