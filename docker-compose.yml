@@ -4,8 +4,8 @@ services:
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
+      - POSTGRES_DB=library
+      - POSTGRES_USER=omadbeksalomov
       - POSTGRES_PASSWORD=2403
   web:
     build: .
@@ -16,7 +16,7 @@ services:
       - "8000:8000"
     environment:
       - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=omadbeksalomov
       - POSTGRES_PASSWORD=2403
     depends_on:
       - db
